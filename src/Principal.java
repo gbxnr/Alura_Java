@@ -1,10 +1,14 @@
+import br.com.alura.java.screenmatch.cauculo.FiltroRecomendacoes;
 import br.com.alura.java.screenmatch.cauculo.cauculadoraDeTempo;
+import br.com.alura.java.screenmatch.modelos.Episodios;
 import br.com.alura.java.screenmatch.modelos.Filme;
 import br.com.alura.java.screenmatch.modelos.Serie;
 
 public class Principal{
     public static void main(String[] args) {
 
+
+        System.out.println("<----------------|inicio|---------------->");
         Filme meuFilme = new Filme();
         meuFilme.setNome("O poderoso Chefão");
         meuFilme.setAnoDeLancamento(1970);
@@ -22,8 +26,10 @@ public class Principal{
 
         //meuFilme.somaDasAvaliacao = 10;
        // meuFilme.totalDeAvaliacoes = 1;
+       System.out.println("----------------<final>----------------");
 
 
+       System.out.println("<----------------|inicio|---------------->");
        Serie lost = new Serie();
        lost.setNome("Lost");
        lost.setAnoDeLancamento(2000);
@@ -32,8 +38,9 @@ public class Principal{
        lost.setEpisodiosPorTemporadas(10);
        lost.setDuracaoEmMInutos(50);
        System.out.println("duração da serie: " + lost.getDuracaoEmMInutos());
+       System.out.println("----------------<final>----------------");
 
-
+        System.out.println("<----------------|inicio|---------------->");
         Filme outroFilme = new Filme();
         outroFilme.setNome("avatar");
         outroFilme.setAnoDeLancamento(2023);
@@ -49,5 +56,15 @@ public class Principal{
 
 
 
+       FiltroRecomendacoes filtro = new FiltroRecomendacoes();
+       filtro.filtra(meuFilme);
+
+       Episodios episodios = new Episodios();
+       episodios.setNumero(1);
+       episodios.setSerie(lost);
+       episodios.setTotalVizualizacoes(300);
+       filtro.filtra(episodios);
+
+       System.out.println("----------------<final>----------------");
     }
 }

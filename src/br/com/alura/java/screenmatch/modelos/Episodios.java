@@ -6,7 +6,7 @@ public class Episodios implements Classificavel {
     private int numero;
     private String nome;
     private Serie serie;
-    private int totalDeAvaliacoes;
+    private int totalVizualizacoes;
     
     private int somaDasAvaliacoes;
     
@@ -30,12 +30,22 @@ public class Episodios implements Classificavel {
     public void setSerie(Serie serie) {
         this.serie = serie;
     }
+
+    
+    public int getTotalVizualizacoes() {
+        return totalVizualizacoes;
+    }
+    public void setTotalVizualizacoes(int totalVizualizacoes) {
+        this.totalVizualizacoes = totalVizualizacoes;
+    }
     @Override
     public int getClassificacao() {
-        if (totalDeAvaliacoes == 0) {
-            return 0;
+        if (totalVizualizacoes> 100) {
+            return 4;
+        }else{
+            return 2;
         }
-        return somaDasAvaliacoes / totalDeAvaliacoes;
+        
     }
 
 

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import br.com.alura.java.screenmatch.cauculo.FiltroRecomendacoes;
 import br.com.alura.java.screenmatch.cauculo.cauculadoraDeTempo;
 import br.com.alura.java.screenmatch.modelos.Episodios;
@@ -66,5 +68,24 @@ public class Principal{
        filtro.filtra(episodios);
 
        System.out.println("----------------<final>----------------");
+
+
+     // Arrays
+      var filmeDOGabriel = new Filme();
+      filmeDOGabriel.setDuracaoEmMInutos(200);
+      filmeDOGabriel.setNome("Kingsman");
+      filmeDOGabriel.setAnoDeLancamento(2015);
+      filmeDOGabriel.avalia(10);
+
+      ArrayList<Filme> ListaDeFilmes = new ArrayList<>();
+      ListaDeFilmes.add(filmeDOGabriel);
+      ListaDeFilmes.add(meuFilme);
+      ListaDeFilmes.add(outroFilme);
+
+      System.out.println("Tamanho da Lista" + ListaDeFilmes.size());
+      System.out.println("Primeiro Filme" + ListaDeFilmes.get(0).getNome());
+      System.out.println(ListaDeFilmes);
+       System.out.println("toString do FIlme" + ListaDeFilmes.get(0).toString());
+
     }
 }

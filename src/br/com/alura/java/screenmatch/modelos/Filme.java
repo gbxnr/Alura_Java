@@ -22,5 +22,11 @@ public class Filme extends Titulo implements Classificavel {
         
     }
 
+    // aqui ele vai esta falando na hora de rodar o nome do filme e tbm o ano de lancamento
+    @Override
+    public String toString() {
+        return "Filme: " + this.getNome() + " (" + this.getAnoDeLancamento() + ")";
+    }
+
 }
 

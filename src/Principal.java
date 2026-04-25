@@ -11,9 +11,7 @@ public class Principal{
 
 
         System.out.println("<----------------|inicio|---------------->");
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("O poderoso Chefão");
-        meuFilme.setAnoDeLancamento(1970);
+        Filme meuFilme = new Filme("O poderoso Chefão", 1970);
         meuFilme.setDuracaoEmMInutos(180);
         System.out.println("duração do filme: " + meuFilme.getDuracaoEmMInutos());
 
@@ -32,9 +30,8 @@ public class Principal{
 
 
        System.out.println("<----------------|inicio|---------------->");
-       Serie lost = new Serie();
-       lost.setNome("Lost");
-       lost.setAnoDeLancamento(2000);
+       Serie lost = new Serie("Lost", 2000);
+       
        lost.exibeFichaTecnica();
        lost.setTemporadas(10);
        lost.setEpisodiosPorTemporadas(10);
@@ -43,9 +40,7 @@ public class Principal{
        System.out.println("----------------<final>----------------");
 
         System.out.println("<----------------|inicio|---------------->");
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("avatar");
-        outroFilme.setAnoDeLancamento(2023);
+        Filme outroFilme = new Filme("avatar", 2023);
         outroFilme.setDuracaoEmMInutos(200);
 
 
@@ -71,10 +66,9 @@ public class Principal{
 
 
      // Arrays
-      var filmeDOGabriel = new Filme();
+      var filmeDOGabriel = new Filme("Kingsman", 2015);
       filmeDOGabriel.setDuracaoEmMInutos(200);
       filmeDOGabriel.setNome("Kingsman");
-      filmeDOGabriel.setAnoDeLancamento(2015);
       filmeDOGabriel.avalia(10);
 
       ArrayList<Filme> ListaDeFilmes = new ArrayList<>();
